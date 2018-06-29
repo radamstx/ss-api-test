@@ -2,6 +2,8 @@
 
 This project is for the purposes of an interview code challenge.
 
+Caveat: This is my first project using axios and jest.
+
 Robert Adams 512-289-3850 <r.adams.tx@gmail.com>
 
 ## Getting Started

@@ -14,7 +14,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/ss-__tests__
+    working_directory: ~/ss-api-test
 
     steps:
       - checkout
@@ -42,4 +42,4 @@ jobs:
 
       # Artifact __tests__ results
       - store_artifacts:
-          path: __tests__-results
+          path: test-results
