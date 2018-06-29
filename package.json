@@ -1,0 +1,23 @@
+{
+  "name": "ss-api-test",
+  "version": "0.0.1",
+  "description": "API Tests for Interview Code Challenge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radamstx/ss-api-test.git"
+  },
+  "scripts": {
+    "test": "run-tests.sh"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "reporters": ["default", "jest-junit"]
+  },
+  "author": "Robert Adams <r.adams.tx@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "jest": "^23.2.0",
+    "jest-junit": "^5.1.0"
+  }
+}
