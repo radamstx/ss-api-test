@@ -17,6 +17,15 @@ describe("GET /marketinfo/[pair]", () => {
     });
   });
 
+  // Base Case - Invalid pair returns 403
+  it("returns an error if an invalid pair is supplied", () => {
+    return marketInfoApi.getMarketInfo("herp", "derp").then((response) => {
+      expect(false).toBeTruthy();
+    }).catch((error) => {
+      expect(error.response.status).toBe(403);
+    })
+  });
+
   // Tests all cryptocurrency pairs
   for (let i in Cryptocurrencies) {
     let currency = Cryptocurrencies[i];

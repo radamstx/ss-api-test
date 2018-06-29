@@ -1,6 +1,12 @@
 const pair = require("../helpers/currency-pair");
 
 expect.extend({
+  toReturnError(received, message) {
+    return {
+      message: () => "error response not observed",
+      pass: received.data.hasOwnProperty("error") && received.data["error"] === message
+    }
+  },
   toReturnPair(received, lhs, rhs) {
     const pairReturned = received.data["pair"];
     const _pair = pair(lhs, rhs);

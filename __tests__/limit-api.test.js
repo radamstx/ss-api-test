@@ -17,6 +17,13 @@ describe("GET /limit/[pair]", () => {
     });
   });
 
+  // Base Case - Invalid Pair
+  it("returns an error if an invalid pair is supplied", () => {
+    return limitApi.getDepositLimit("herp", "derp").then((response) => {
+      expect(response).toReturnError("Unknown pair");
+    })
+  });
+
   // Tests all cryptocurrency pairs
   for (let i in Cryptocurrencies) {
     let currency = Cryptocurrencies[i];
