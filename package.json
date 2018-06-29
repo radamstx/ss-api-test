@@ -11,12 +11,16 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "reporters": ["default", "jest-junit"]
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
   },
   "author": "Robert Adams <r.adams.tx@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "axios": "^0.18.0",
+    "eslint": "^5.0.1",
     "jest": "^23.2.0",
     "jest-junit": "^5.1.0"
   }
